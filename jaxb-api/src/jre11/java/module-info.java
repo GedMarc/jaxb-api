@@ -15,10 +15,10 @@
  * References in this document to JAXB refer to the Jakarta XML Binding unless otherwise noted.
  */
 module java.xml.bind {
-    requires transitive jakarta.activation;
+    requires jakarta.activation;
     requires transitive java.xml;
     requires java.logging;
-    requires java.desktop;
+    requires static java.desktop;
 
     exports javax.xml.bind;
     exports javax.xml.bind.annotation;

@@ -16,14 +16,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.eclipse.ee4j</groupId>
-        <artifactId>project</artifactId>
-        <version>1.0.5</version>
+        <groupId>com.jwebmp.thirdparty</groupId>
+        <artifactId>third-party-modules</artifactId>
+        <version>0.0.0_0-SNAPSHOT</version>
     </parent>
 
-    <groupId>jakarta.xml.bind</groupId>
+    <groupId>com.jwebmp.thirdparty.xml.bind</groupId>
     <artifactId>jakarta.xml.bind-api-parent</artifactId>
-    <version>2.4.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Jakarta XML Binding</name>
     <description>Jakarta XML Binding API</description>
@@ -42,7 +41,47 @@
             <url>http://www.eclipse.org/org/documents/edl-v10.php</url>
             <distribution>repo</distribution>
         </license>
+        <license>
+            <name>Eclipse Public License v. 2.0</name>
+            <url>https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>GNU General Public License, version 2 with the GNU Classpath Exception</name>
+            <url>https://www.gnu.org/software/classpath/license.html</url>
+            <distribution>repo</distribution>
+        </license>
     </licenses>
+
+    <mailingLists>
+        <mailingList>
+            <name>Community discussions</name>
+            <post>jakarta.ee-community@eclipse.org</post>
+            <subscribe>https://accounts.eclipse.org/mailing-list/jakarta.ee-community</subscribe>
+            <unsubscribe>https://accounts.eclipse.org/mailing-list/jakarta.ee-community</unsubscribe>
+            <archive>https://dev.eclipse.org/mhonarc/lists/jakarta.ee-community/</archive>
+            <otherArchives>
+                <otherArchive>http://dev.eclipse.org/mhonarc/lists/jakarta.ee-community/maillist.rss</otherArchive>
+            </otherArchives>
+        </mailingList>
+        <mailingList>
+            <name>PMC discussions</name>
+            <post>ee4j-pmc@eclipse.org</post>
+            <subscribe>https://accounts.eclipse.org/mailing-list/ee4j-pmc</subscribe>
+            <unsubscribe>https://accounts.eclipse.org/mailing-list/ee4j-pmc</unsubscribe>
+            <archive>https://dev.eclipse.org/mhonarc/lists/ee4j-pmc/</archive>
+            <otherArchives>
+                <otherArchive>http://dev.eclipse.org/mhonarc/lists/ee4j-pmc/maillist.rss</otherArchive>
+            </otherArchives>
+        </mailingList>
+        <mailingList>
+            <name>Jakarta XML Binding mailing list</name>
+            <post>jaxb-dev@eclipse.org</post>
+            <subscribe>https://accounts.eclipse.org/mailing-list/jaxb-dev</subscribe>
+            <unsubscribe>https://accounts.eclipse.org/mailing-list/jaxb-dev</unsubscribe>
+            <archive>https://dev.eclipse.org/mhonarc/lists/jaxb-dev</archive>
+        </mailingList>
+    </mailingLists>
 
     <developers>
         <developer>
@@ -56,16 +95,6 @@
         <system>github</system>
         <url>https://github.com/eclipse-ee4j/jaxb-api/issues</url>
     </issueManagement>
-
-    <mailingLists>
-        <mailingList>
-            <name>Jakarta XML Binding mailing list</name>
-            <post>jaxb-dev@eclipse.org</post>
-            <subscribe>https://accounts.eclipse.org/mailing-list/jaxb-dev</subscribe>
-            <unsubscribe>https://accounts.eclipse.org/mailing-list/jaxb-dev</unsubscribe>
-            <archive>https://dev.eclipse.org/mhonarc/lists/jaxb-dev</archive>
-        </mailingList>
-    </mailingLists>
 
     <properties>
         <copyright.exclude>${config.dir}/copyright-exclude</copyright.exclude>
@@ -91,7 +120,6 @@
 
     <modules>
         <module>jaxb-api</module>
-        <module>jaxb-api-test</module>
     </modules>
 
     <dependencyManagement>
@@ -165,24 +193,24 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                   <!-- <source>1.7</source>
+                    <target>1.7</target>-->
                     <compilerArgs>
                         <arg>-Xlint:all</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
-            <plugin>
+           <!-- <plugin>
                 <groupId>org.glassfish.copyright</groupId>
                 <artifactId>glassfish-copyright-maven-plugin</artifactId>
                 <configuration>
                     <templateFile>${copyright.templatefile}</templateFile>
                     <excludeFile>${copyright.exclude}</excludeFile>
-                    <!-- skip files not under SCM-->
+                    &lt;!&ndash; skip files not under SCM&ndash;&gt;
                     <scmOnly>${copyright.scmonly}</scmOnly>
-                    <!-- for use with repair -->
+                    &lt;!&ndash; for use with repair &ndash;&gt;
                     <update>${copyright.update}</update>
-                    <!-- check that year is correct -->
+                    &lt;!&ndash; check that year is correct &ndash;&gt;
                     <ignoreYear>${copyright.ignoreyear}</ignoreYear>
                 </configuration>
                 <executions>
@@ -193,7 +221,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
         </plugins>
 
     </build>
