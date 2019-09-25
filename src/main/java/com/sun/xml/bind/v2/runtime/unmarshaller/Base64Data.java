@@ -61,7 +61,7 @@ public final class Base64Data extends Pcdata {
      * Unused when {@link #dataHandler} is set.
      * Use {@link DataHandler#getContentType()} in that case.
      */
-    private @Nullable
+    private
     String mimeType;
 
     /**
@@ -70,7 +70,7 @@ public final class Base64Data extends Pcdata {
      * @param len
      *      data[0] to data[len-1] are treated as the data.
      */
-    public void set(byte[] data, int len, @Nullable String mimeType) {
+    public void set(byte[] data, int len,  String mimeType) {
         this.data = data;
         this.dataLen = len;
         this.dataHandler = null;
@@ -83,7 +83,7 @@ public final class Base64Data extends Pcdata {
      * @param data
      *      this buffer may be owned directly by the unmarshaleld JAXB object.
      */
-    public void set(byte[] data, @Nullable String mimeType) {
+    public void set(byte[] data,  String mimeType) {
         set(data, data.length, mimeType);
     }
 

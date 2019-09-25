@@ -235,7 +235,7 @@ public final class NamespaceContextImpl implements NamespaceContext2 {
      * @return
      *      the index of this new binding.
      */
-    public int put(@NotNull String uri, @Nullable String prefix) {
+    public int put(@NotNull String uri,  String prefix) {
         if(size==nsUris.length) {
             // reallocate
             String[] u = new String[nsUris.length*2];

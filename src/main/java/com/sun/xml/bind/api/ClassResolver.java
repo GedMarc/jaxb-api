@@ -85,5 +85,5 @@ public abstract class ClassResolver {
      *      reproted to {@link ValidationEventHandler} (just like any other error
      *      during the unmarshalling.)
      */
-    public abstract @Nullable Class<?> resolveElementName(@NotNull String nsUri, @NotNull String localName) throws Exception;
+    public abstract  Class<?> resolveElementName(@NotNull String nsUri, @NotNull String localName) throws Exception;
 }

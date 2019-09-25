@@ -140,20 +140,20 @@ public interface AnnotationReader<T,C,F,M> {
      * @return null
      *      if the annotation was not found.
      */
-    @Nullable
+
     <A extends Annotation> A getMethodParameterAnnotation(
 			Class<A> annotation, M method, int paramIndex, Locatable srcPos);
 
     /**
      * Reads an annotation on a class.
      */
-    @Nullable
+
     <A extends Annotation> A getClassAnnotation(Class<A> annotation, C clazz, Locatable srcpos) ;
 
     /**
      * Reads an annotation on the package that the given class belongs to.
      */
-    @Nullable
+
     <A extends Annotation> A getPackageAnnotation(Class<A> annotation, C clazz, Locatable srcpos);
 
     /**

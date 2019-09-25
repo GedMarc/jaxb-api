@@ -56,7 +56,7 @@ public class RuntimeModelBuilder extends ModelBuilder<Type,Class,Field,Method> {
      * The {@link JAXBContextImpl} for which the model is built.
      * Null when created for reflection.
      */
-    public final @Nullable JAXBContextImpl context;
+    public final  JAXBContextImpl context;
 
     public RuntimeModelBuilder(JAXBContextImpl context, RuntimeAnnotationReader annotationReader, Map<Class, Class> subclassReplacements, String defaultNamespaceRemap) {
         super(annotationReader, Utils.REFLECTION_NAVIGATOR, subclassReplacements, defaultNamespaceRemap);

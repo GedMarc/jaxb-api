@@ -79,7 +79,7 @@ public abstract class TransducedAccessor<BeanT> {
      * @return
      *      if the accessor didn't yield a value, return null.
      */
-    public abstract @Nullable CharSequence print(@NotNull BeanT o) throws AccessorException, SAXException;
+    public abstract  CharSequence print(@NotNull BeanT o) throws AccessorException, SAXException;
 
     /**
      * Parses the text value into the responsible field of the given bean.

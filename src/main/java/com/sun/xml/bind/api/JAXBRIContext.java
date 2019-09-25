@@ -74,10 +74,10 @@ public abstract class JAXBRIContext extends JAXBContext {
      * @since JAXB 2.1 EA2
      */
     public static JAXBRIContext newInstance(@NotNull Class[] classes,
-       @Nullable Collection<TypeReference> typeRefs,
-       @Nullable Map<Class,Class> subclassReplacements,
-       @Nullable String defaultNamespaceRemap, boolean c14nSupport,
-       @Nullable RuntimeAnnotationReader ar) throws JAXBException {
+        Collection<TypeReference> typeRefs,
+        Map<Class,Class> subclassReplacements,
+        String defaultNamespaceRemap, boolean c14nSupport,
+        RuntimeAnnotationReader ar) throws JAXBException {
         return newInstance(classes, typeRefs, subclassReplacements,
                 defaultNamespaceRemap, c14nSupport, ar, false, false, false, false);
     }
@@ -116,10 +116,10 @@ public abstract class JAXBRIContext extends JAXBContext {
      *      See {@link #SUPRESS_ACCESSOR_WARNINGS} for the meaning of this parameter.
      */
     public static JAXBRIContext newInstance(@NotNull Class[] classes,
-       @Nullable Collection<TypeReference> typeRefs,
-       @Nullable Map<Class,Class> subclassReplacements,
-       @Nullable String defaultNamespaceRemap, boolean c14nSupport,
-       @Nullable RuntimeAnnotationReader ar,
+        Collection<TypeReference> typeRefs,
+        Map<Class,Class> subclassReplacements,
+        String defaultNamespaceRemap, boolean c14nSupport,
+        RuntimeAnnotationReader ar,
        boolean xmlAccessorFactorySupport, 
        boolean allNillable, 
        boolean retainPropertyInfo, 
@@ -142,8 +142,8 @@ public abstract class JAXBRIContext extends JAXBContext {
      *      Compatibility with older versions.
      */
     public static JAXBRIContext newInstance(@NotNull Class[] classes,
-        @Nullable Collection<TypeReference> typeRefs,
-        @Nullable String defaultNamespaceRemap, boolean c14nSupport ) throws JAXBException {
+         Collection<TypeReference> typeRefs,
+         String defaultNamespaceRemap, boolean c14nSupport ) throws JAXBException {
         return newInstance(classes,typeRefs, Collections.<Class,Class>emptyMap(),
                 defaultNamespaceRemap,c14nSupport,null);
     }
@@ -167,7 +167,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *
      * @since 2.0 EA1
      */
-    public abstract @Nullable QName getElementName(@NotNull Object o) throws JAXBException;
+    public abstract  QName getElementName(@NotNull Object o) throws JAXBException;
 
     /**
      * Allows to retrieve the element name based on Class.
@@ -176,7 +176,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      * @throws javax.xml.bind.JAXBException
      * @since 2.1.10
      */
-    public abstract @Nullable QName getElementName(@NotNull Class o) throws JAXBException;
+    public abstract  QName getElementName(@NotNull Class o) throws JAXBException;
 
     /**
      * Creates a mini-marshaller/unmarshaller that can process a {@link TypeReference}.
@@ -400,7 +400,7 @@ public abstract class JAXBRIContext extends JAXBContext {
      *      or null if the type is not assignable to the base type.
      * @since 2.0 FCS
      */
-    public static @Nullable Type getBaseType(@NotNull Type type, @NotNull Class baseType) {
+    public static  Type getBaseType(@NotNull Type type, @NotNull Class baseType) {
         return Utils.REFLECTION_NAVIGATOR.getBaseClass(type, baseType);
     }
 

@@ -160,13 +160,13 @@ public final class UnmarshallingContext extends Coordinator
     /**
      * Used to discover additional classes when we hit unknown elements/types.
      */
-    public @Nullable ClassResolver classResolver;
+    public  ClassResolver classResolver;
 
     /**
      * User-supplied {@link ClassLoader} for converting name to {@link Class}.
      * For backward compatibility, when null, use thread context classloader.
      */
-    public @Nullable ClassLoader classLoader;
+    public  ClassLoader classLoader;
 
     /**
      * The variable introduced to avoid reporting n^10 similar errors.

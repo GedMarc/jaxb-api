@@ -573,7 +573,7 @@ public final class XmlSchemaGenerator<T,C,F,M> {
             }
         }
 
-        private void addDependencyTo(@Nullable QName qname) {
+        private void addDependencyTo( QName qname) {
             // even though the Element interface says getElementName() returns non-null,
             // ClassInfo always implements Element (even if an instance of ClassInfo might not be an Element).
             // so this check is still necessary

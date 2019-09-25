@@ -50,7 +50,7 @@ public class XsiTypeLoader extends Loader {
         loader.startElement(state,ea);
     }
 
-    /*pacakge*/ static JaxBeanInfo parseXsiType(UnmarshallingContext.State state, TagName ea, @Nullable JaxBeanInfo defaultBeanInfo) throws SAXException {
+    /*pacakge*/ static JaxBeanInfo parseXsiType(UnmarshallingContext.State state, TagName ea,  JaxBeanInfo defaultBeanInfo) throws SAXException {
         UnmarshallingContext context = state.getContext();
         JaxBeanInfo beanInfo = null;
 

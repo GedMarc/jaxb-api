@@ -163,5 +163,5 @@ public interface PropertyInfo<T,C> extends AnnotationSource {
      * when this returns non-null, it overrides the type names of all types
      * that are in this property.)
      */
-    @Nullable QName getSchemaType();
+     QName getSchemaType();
 }

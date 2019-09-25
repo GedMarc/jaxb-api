@@ -72,7 +72,7 @@ public abstract class Accessor<BeanT, ValueT> implements Receiver {
      *                (See {@link RuntimeModelBuilder#context}.)
      * @return At least the implementation can return {@code this}.
      */
-    public Accessor<BeanT, ValueT> optimize(@Nullable JAXBContextImpl context) {
+    public Accessor<BeanT, ValueT> optimize( JAXBContextImpl context) {
         return this;
     }
 

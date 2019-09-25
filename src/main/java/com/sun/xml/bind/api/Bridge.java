@@ -202,7 +202,7 @@ public abstract class Bridge<T> {
     /**
      * @since 2.0.3
      */
-    public final @NotNull T unmarshal(@NotNull XMLStreamReader in, @Nullable AttachmentUnmarshaller au) throws JAXBException {
+    public final @NotNull T unmarshal(@NotNull XMLStreamReader in,  AttachmentUnmarshaller au) throws JAXBException {
         Unmarshaller u = context.unmarshallerPool.take();
         u.setAttachmentUnmarshaller(au);
         return exit(unmarshal(u,in),u);
@@ -234,7 +234,7 @@ public abstract class Bridge<T> {
     /**
      * @since 2.0.3
      */
-    public final @NotNull T unmarshal(@NotNull Source in, @Nullable AttachmentUnmarshaller au) throws JAXBException {
+    public final @NotNull T unmarshal(@NotNull Source in,  AttachmentUnmarshaller au) throws JAXBException {
         Unmarshaller u = context.unmarshallerPool.take();
         u.setAttachmentUnmarshaller(au);
         return exit(unmarshal(u,in),u);
@@ -289,7 +289,7 @@ public abstract class Bridge<T> {
     /**
      * @since 2.0.3
      */
-    public final @NotNull T unmarshal(@NotNull Node n, @Nullable AttachmentUnmarshaller au) throws JAXBException {
+    public final @NotNull T unmarshal(@NotNull Node n,  AttachmentUnmarshaller au) throws JAXBException {
         Unmarshaller u = context.unmarshallerPool.take();
         u.setAttachmentUnmarshaller(au);
         return exit(unmarshal(u,n),u);
